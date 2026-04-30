@@ -1,5 +1,5 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ChartDataPoint } from '../hooks/useTransactions';
+import type { ChartDataPoint } from '../hooks/useTransactions';
 
 interface Props {
   data: ChartDataPoint[];

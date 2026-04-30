@@ -1,5 +1,5 @@
 import { Trash2, ArrowUpRight, ArrowDownRight } from 'lucide-react';
-import { Transaction } from '../hooks/useTransactions';
+import type { Transaction } from '../hooks/useTransactions';
 
 interface Props {
   transactions: Transaction[];

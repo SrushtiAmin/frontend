@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
-import { Transaction, TransactionType } from '../hooks/useTransactions';
+import type { Transaction, TransactionType } from '../hooks/useTransactions';
 
 interface Props {
   onSubmit: (data: Omit<Transaction, 'id'>) => Promise<void>;

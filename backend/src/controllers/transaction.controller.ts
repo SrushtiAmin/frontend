@@ -27,7 +27,7 @@ export const addTransaction = (req: Request, res: Response) => {
     res.status(201).json(newTransaction);
   } catch (error) {
     if (error instanceof z.ZodError) {
-      res.status(400).json({ error: 'Validation failed', details: error.errors });
+      res.status(400).json({ error: 'Validation failed', details: error.issues });
     } else {
       res.status(500).json({ error: 'Internal server error' });
     }
@@ -36,7 +36,7 @@ export const addTransaction = (req: Request, res: Response) => {
 
 export const deleteTransaction = (req: Request, res: Response) => {
   const { id } = req.params;
-  const success = TransactionService.deleteTransaction(id);
+  const success = TransactionService.deleteTransaction(id as string);
   if (success) {
     res.status(204).send();
   } else {

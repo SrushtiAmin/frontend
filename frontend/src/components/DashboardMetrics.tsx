@@ -1,5 +1,5 @@
 import { DollarSign, TrendingUp, TrendingDown } from 'lucide-react';
-import { DashboardMetrics as MetricsType } from '../hooks/useTransactions';
+import type { DashboardMetrics as MetricsType } from '../hooks/useTransactions';
 
 interface Props {
   metrics: MetricsType;
